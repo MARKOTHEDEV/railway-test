@@ -1,0 +1,109 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>signUp form</title>
+</head>
+<body>
+    <br><br><br>
+    <div class="marko_container">
+        <!-- start of marko form -->
+        <form action="{% url 'form' %}" class="marko-form" id="marko-form" method="post">
+            {% csrf_token %}
+            <!-- start of marko-form__header_container of marko form -->
+            <header class="marko-form__header_container">
+                <h2 class="marko-form__h1">Sign Up</h2>
+                <p class="marko_form_content">Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+            </header>
+            <!-- end of marko-form__header_container of marko form -->
+
+            <!-- start of marko-form__input_grid -->
+            <main class="marko-form__input_grid">
+                <!-- start of flexed_input -->
+                <div class="flexed_input">
+                        <!-- start of marko_form__input_box -->
+                        <div class="marko_form__input_box flexed_input_item">
+                            <label for="">First Name</label>
+                            <input type="text" name="first_name" id="" placeholder="e.g John " required>
+                        </div>
+                        <!-- end of marko_form__input_box -->
+
+                        <!-- start of marko_form__input_box -->
+                        <div class="marko_form__input_box flexed_input_item">
+                            <label for="">Last Name</label>
+                            <input type="text" name="last_name" id="" placeholder="e.g Doe" required>
+                        </div>
+                        <!-- end of marko_form__input_box -->
+                </div>
+                <!-- end of flexed_input -->
+
+
+
+                  <!-- start of marko_form__input_box -->
+                  <div class="marko_form__input_box">
+                    <label for="">Email Address</label>
+                    <input type="text" name="email_addresse" id="" placeholder="e.g JohnDoe@gmail.com" required>
+                </div>
+                <!-- end of marko_form__input_box -->
+
+
+
+                  <!-- start of marko_form__input_box -->
+                  <!-- <div class="marko_form__input_box">
+                      <label for="">Country</label>
+                      <select name="" id="" >
+                          <option value="Nigeria" >Nigeria</option>
+                      </select>
+                  </div> -->
+                <!-- end of marko_form__input_box -->
+
+
+
+                    <!-- start of marko_form__input_box -->
+                       <div class="marko_form__input_box">
+                           <label for="">Phone Number</label>
+                        
+                           <div class="input_and_select">
+                            <select name="" id="" >
+                                <option value="" >+235</option>
+                            </select>
+                            <input type="number" placeholder="phone Number" name="phone_number" >
+                           
+                           </div>
+                      </div>
+                  <!-- end of marko_form__input_box -->
+  
+ 
+
+              
+
+            </main>
+            <!-- end of marko-form__input_grid -->
+            <p class="marko_form_content">
+                <input type="checkbox" name="" id="">
+
+                Creating an account means you're okay with our <strong>Terms and Conditions</strong> and Our <strong>Privacy Policy</strong>
+            </p>
+
+            <button id="submit_to_marko_form" type="submit">Sign Up</button>
+        </form>
+        <!-- end of marko form -->
+
+
+        <ul>
+            {% for info in all_info %}
+                    <div>
+                        <h3>{{info.first_name}}   {{ info.last_name}}</h3>
+                    </div>
+            {% endfor %}
+            </ul>
+    </div>
+    <br><br><br>
+
+</body>
+</html>

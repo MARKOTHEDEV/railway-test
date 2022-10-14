@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    /* border:1px solid red; */
+    /* height: 100vh; */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.marko_container{
+    /* border:1px solid blue; */
+    height: 100%;
+/* display: flex;
+justify-content: center;
+align-items: center; */
+}
+
+.marko-form{
+    background-color: #f5f7fb;
+    padding: .8rem .8rem;
+    
+}
+.marko-form__header_container{
+    color: #3f4044;
+
+}
+.marko-form__h1{
+    font-size: 1.7rem;
+    font-weight: 600;
+    padding: 1rem 0;
+}
+.marko_form_content{
+    padding: .8rem 0;
+    color: #3f4044;
+
+    font-size: .8rem;
+}
+
+/* this is where all the input for is in */
+.marko-form__input_grid{
+    /* margin: 2% 0; */
+}
+
+.marko_form__input_box{
+    /* this container contains the 
+    input and label
+    */
+    display: flex;
+    flex-direction: column;
+    color: #15161a;
+    margin: 4% 0;
+
+}
+
+.marko_form__input_box label{
+    text-transform: capitalize;
+    padding: .5rem 0;
+}
+.marko_form__input_box input{
+    border: transparent;
+    padding: .8rem 1rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.marko_form__input_box select{
+    border: transparent;
+    padding: .8rem 1rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+.marko_form__input_box input::placeholder{
+    color: #495057;
+    font-size: 400;
+    font-size: .9rem;
+}
+
+.input_and_select{
+    display: flex;
+
+}
+.input_and_select input{
+    width: 70%;
+}
+.input_and_select select{
+    width: 30%;
+}
+
+
+#submit_to_marko_form{
+     border: transparent;
+     color: white;
+     font-size: .8rem;
+     background-color: #ec7e3b;
+     padding: .7rem 1.4rem;
+     border-radius: 5px;
+     cursor: pointer;
+}
+
+@media screen and (min-width:700px) {
+    .marko-form{
+        max-width: 700px;
+        margin: 0 auto;
+        padding: .8rem 1rem;
+        border-radius: 10px;
+
+    }
+        .flexed_input{
+            display: flex;
+            justify-content: space-between;
+        }
+        .flexed_input .flexed_input_item{
+            width: 45%;
+        }
+}
